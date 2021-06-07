@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://dormousehole.readthedocs.io/en/latest/quickstart.html#id2 -->
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<title>首页</title>
+</head>
+<body>
+<h1>用户列表</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>用户名</th>
+<th>年龄</th>    
+<th>操作</th>   
+</tr>
+</thead>
+<tbody>
+{% for key,value in data_list.items() %}
+<tr>
+<td>{{key}}</td>
+<td>{{value.name}}</td>
+<td>{{value.age}}</td>
+<td>
+<a>编辑</a>
+<a>删除</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body></html>
